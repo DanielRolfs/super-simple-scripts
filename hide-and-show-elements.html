@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widh=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .rectagnle{
+            height: 150px;
+            width: 150px;
+            background-color: yellow;
+            margin: 8px;
+        }
+
+        .d-none {
+            display: none;
+        }
+
+
+    </style>
+
+    <script>
+        function hide(id){
+            document.getElementById(id).classList.add('d-none');
+        }
+
+        function show(id){
+            document.getElementById(id).classList.remove('d-none');
+        }
+    </script>
+</head>
+
+<body>
+
+        <button onclick="show('1')">Show 1</button>
+        <button onclick="show('2')">Show 2</button>
+        <button onclick="show('3')">Show 3</button>
+        <button onclick="show('4')">Show 4</button>
+
+        <div id="1" onclick="hide('1')" class="rectagnle">Click to remove box 1</div>
+        <div id="2" onclick="hide('2')" class="rectagnle">Click to remove box 2</div>
+        <div id="3" onclick="hide('3')" class="rectagnle">Click to remove box 3</div>
+        <div id="4" onclick="hide('4')" class="rectagnle">Click to remove box 4</div>
+    
+
+</body>
+
+</html>

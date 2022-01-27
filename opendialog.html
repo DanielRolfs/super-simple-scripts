@@ -1,0 +1,70 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .dialog-bg {
+            background-color: rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dialog {
+            height: 50vh;
+            width: 50vh;
+            background-color: white;
+            border: 1px solid lightgray;
+            border-radius: 10px;
+            padding: 24px;
+        }
+
+        .d-none{
+            display: none;
+        }
+
+    </style>
+
+    <script>
+        function openDialog(text){
+            document.getElementById('dialog').classList.remove('d-none');
+            document.getElementById('dialog-message').innerHTML = text;
+        }
+
+        function closeDialog(){
+            document.getElementById('dialog').classList.add('d-none');
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="dialog" class="dialog-bg d-none" onclick="closeDialog()">
+        <div class="dialog">
+            <h1>Dialog</h1>
+            <p id="dialog-message">Informationen</p>
+        </div>
+
+    </div>
+
+    <h1>Überschrift</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis dolore dignissimos autem obcaecati temporibus
+        ex voluptatem eum! Provident a, eos saepe illum at iusto iste quia neque, similique, accusantium hic?</p>
+
+        <button onclick="openDialog('Nachricht 1')">Dialog 1 öffnen</button>
+        <button onclick="openDialog('Nachricht 2')">Dialog 2 öffnen</button>
+
+
+</body>
+
+</html>

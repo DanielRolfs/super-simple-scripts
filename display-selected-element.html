@@ -1,0 +1,47 @@
+<html lang="en">
+
+<head>
+
+
+    <style>
+
+        .funny-image{
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+<h1 id="headline">Programmier-Witze</h1>
+
+<button onclick="newJoke()">Witz 1</button>
+<button onclick="newJoke2()">Witz 2</button>
+<button onclick="newJoke3()">Witz 3</button>
+
+<p id="witz">
+    Wähle einen Witz.
+</p>
+
+<script>
+    function newJoke(){
+        document.getElementById('witz').innerHTML = `
+        Was ist der Unterschied zwischen einem Mac-User und einem Terroristen? Mit dem Terrorist kann man verhandeln.
+        `
+    }
+    function newJoke2(){
+        document.getElementById('witz').innerHTML = 'Die Selbsthilfegruppe „HTML-Sonderzeichen-Probleme“ trifft sich heute im gro&szlig ;en Saal.' 
+    }
+    function newJoke3(){
+        document.getElementById('witz').innerHTML = 'Wo geht ein Programmierer morgens hin? Auf die Arbyte.' 
+    }
+
+
+
+</script>
+
+
+
+</body>
+
+
+</html>

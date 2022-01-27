@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <script>
+        let images = ['1.jpg', '2.jpg', '3.jpg'];
+        let currentImage = 0;
+
+        function start() {
+            let miliseconds = +document.getElementById('inputfield').value * 1000;
+
+            if (miliseconds > 10000) {
+                alert('Please enter a number. (below 5 recommendet)');
+            }else {
+
+                if (miliseconds < 1000) {
+                    alert('Please enter at least 1 second');
+                } else {
+
+
+                    showImage(currentImage);
+                    currentImage++;
+
+                    if (currentImage == 3) {
+                        currentImage = 0;
+                    }
+
+                    setTimeout(start, miliseconds);
+                }
+            }
+        }
+
+        function showImage(i) {
+            document.getElementById('image').src = images[i];
+        }
+
+    </script>
+</head>
+
+<body style="display: flex; flex-direction: column; width: 200px;">
+
+    <input  type="number" id="inputfield" placeholder="change img every x sec"> <button onclick="start()">Start</button>
+    <img style="margin-top: 15px;" id="image" src="1.jpg">
+    <p>reload page to set new interval</p>
+
+
+</body>
+
+
+
+</html>

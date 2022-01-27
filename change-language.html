@@ -1,0 +1,27 @@
+<html lang="en">
+
+<head>
+
+    <script>
+        function english() {
+            document.getElementById('headline').innerHTML = 'Hello';
+            document.getElementById('text1').innerHTML = 'Welome on this page';
+        }
+        function german() {
+            document.getElementById('headline').innerHTML = 'Hallo';
+            document.getElementById('text1').innerHTML = 'Willkommen auf dieser Seite';
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <a onclick="german()">Deutsch</a> | <a onclick="english()">English</a>
+
+    <h1 id="headline">Hallo/ Hello</h1>
+    <p id="text1">Bitte wähle oben eine sprache / Please select a language above</p>
+</body>
+
+
+</html>
